@@ -16,8 +16,6 @@ html,body{background:#0d1a30!important;min-height:100vh;}
 .a3{animation:rise 0.55s .16s cubic-bezier(.22,.68,0,1.2) both;}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;}
 .eyebrow::before,.eyebrow::after{content:'';width:22px;height:1px;background:rgba(201,168,76,0.3);display:block;}
-
-/* LAYOUT */
 .outer{max-width:1040px;margin:0 auto;padding:0 20px 80px;}
 .two-col{display:grid;grid-template-columns:1fr 1.55fr;gap:32px;align-items:start;}
 .cal-frame{width:100%;border:none;min-height:660px;display:block;}
@@ -26,14 +24,17 @@ html,body{background:#0d1a30!important;min-height:100vh;}
 .check-item:last-child{margin-bottom:0;}
 .pill-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px;}
 .pill{background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.22);border-radius:100px;padding:5px 14px;font-size:11.5px;font-weight:500;letter-spacing:0.04em;color:#e2c472;}
-.divider{height:1px;background:rgba(255,255,255,0.07);margin:22px 0;}
 .footer-links{display:flex;justify-content:center;gap:20px;margin-bottom:10px;}
 
 @media(max-width:700px){
   .two-col{grid-template-columns:1fr;gap:20px;}
+  .cal-col{order:-1;}
   .cal-frame{min-height:580px;}
   .outer{padding:0 16px 60px;}
-  .hero-section{padding:36px 16px 24px!important;}
+  .hero-section{padding:22px 16px 14px!important;}
+  .hero-h1{font-size:28px!important;margin-bottom:8px!important;}
+  .hero-sub{display:none!important;}
+  .pill-row{display:none!important;}
   .hide-mobile{display:none!important;}
 }
 </style>
@@ -54,8 +55,8 @@ html,body{background:#0d1a30!important;min-height:100vh;}
   <!-- HERO -->
   <div class="a1 hero-section" style="text-align:center;padding:52px 20px 36px;max-width:700px;margin:0 auto;">
     <div class="eyebrow">One Step Away</div>
-    <h1 style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(34px,7vw,60px);line-height:1.04;color:#f5f1e8;margin-bottom:16px;">Your Sales Team Should Be<br><em style="font-style:italic;color:#e2c472;">Closing, Not Chasing.</em></h1>
-    <p style="font-size:clamp(14.5px,2.5vw,16.5px);color:rgba(245,241,232,0.65);max-width:520px;margin:0 auto 0;line-height:1.75;">Pick a time below. We'll spend 60 minutes diagnosing your pipeline, confirming fit, and mapping out exactly what consistent booked calls looks like for your business.</p>
+    <h1 class="hero-h1" style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(34px,7vw,60px);line-height:1.04;color:#f5f1e8;margin-bottom:16px;">Your Sales Team Should Be<br><em style="font-style:italic;color:#e2c472;">Closing, Not Chasing.</em></h1>
+    <p class="hero-sub" style="font-size:clamp(14.5px,2.5vw,16.5px);color:rgba(245,241,232,0.65);max-width:520px;margin:0 auto;line-height:1.75;">Pick a time below. We'll spend 60 minutes diagnosing your pipeline, confirming fit, and mapping out exactly what consistent booked calls looks like for your business.</p>
     <div class="pill-row">
       <span class="pill">60-Minute Strategy Session</span>
       <span class="pill">No Pitch. No Pressure.</span>
@@ -67,10 +68,8 @@ html,body{background:#0d1a30!important;min-height:100vh;}
   <div class="outer">
     <div class="two-col">
 
-      <!-- LEFT -->
+      <!-- LEFT: INFO -->
       <div class="a2">
-
-        <!-- WHAT WE'LL DO ON THE CALL -->
         <div style="background:#12213c;border:1px solid rgba(255,255,255,0.11);border-radius:12px;padding:24px 22px;margin-bottom:16px;">
           <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,241,232,0.35);margin-bottom:18px;">What Happens On This Call</div>
           <ul class="check-list">
@@ -107,19 +106,17 @@ html,body{background:#0d1a30!important;min-height:100vh;}
               </div>
               <div>
                 <div style="font-size:13.5px;font-weight:600;color:#f5f1e8;margin-bottom:3px;">30-Day Deployment Roadmap</div>
-                <div style="font-size:13px;color:rgba(245,241,232,0.55);line-height:1.6;">If it's a fit, we map out exactly what the first 30 days of deployment looks like — infrastructure, timelines, and when your calendar starts filling.</div>
+                <div style="font-size:13px;color:rgba(245,241,232,0.55);line-height:1.6;">If it's a fit, we map out exactly what the first 30 days looks like — infrastructure, timelines, and when your calendar starts filling.</div>
               </div>
             </li>
           </ul>
         </div>
 
-        <!-- THE DIFFERENTIATOR -->
         <div style="background:#12213c;border:1px solid rgba(255,255,255,0.11);border-radius:12px;padding:22px;margin-bottom:16px;">
           <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,241,232,0.35);margin-bottom:12px;">Why This Is Different</div>
           <p style="font-size:13.5px;color:rgba(245,241,232,0.65);line-height:1.75;margin:0;">Most systems stop at the reply. When a prospect shows interest, our AI calls them within 10 seconds, sends a booking link by email, and fires an SMS — all at the same time, with zero human involvement. The prospect books directly onto your calendar. Your only job is to show up and close.</p>
         </div>
 
-        <!-- FOUNDING CLIENT -->
         <div style="background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.25);border-radius:10px;padding:18px 20px;">
           <div style="display:flex;align-items:flex-start;gap:12px;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -130,7 +127,6 @@ html,body{background:#0d1a30!important;min-height:100vh;}
           </div>
         </div>
 
-        <!-- WHO THIS IS FOR -->
         <div class="hide-mobile" style="margin-top:16px;background:#12213c;border:1px solid rgba(255,255,255,0.11);border-radius:12px;padding:22px;">
           <div style="font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,241,232,0.35);margin-bottom:14px;">This Call Is For You If</div>
           <div style="display:flex;flex-direction:column;gap:9px;">
@@ -140,11 +136,10 @@ html,body{background:#0d1a30!important;min-height:100vh;}
             <div style="display:flex;align-items:center;gap:10px;"><span style="color:#c9a84c;font-size:13px;">→</span><span style="font-size:13px;color:rgba(245,241,232,0.6);">You want to scale revenue without scaling headcount</span></div>
           </div>
         </div>
-
       </div>
 
       <!-- RIGHT: CALENDAR -->
-      <div class="a3" style="background:#12213c;border:1px solid rgba(255,255,255,0.11);border-radius:12px;overflow:hidden;">
+      <div class="a3 cal-col" style="background:#12213c;border:1px solid rgba(255,255,255,0.11);border-radius:12px;overflow:hidden;">
         <div style="padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.08);">
           <div style="font-size:12px;font-weight:600;color:#f5f1e8;letter-spacing:0.05em;">Select a Date &amp; Time</div>
           <div style="font-size:11px;color:rgba(245,241,232,0.38);margin-top:3px;">60-minute strategy session · All time zones supported</div>
