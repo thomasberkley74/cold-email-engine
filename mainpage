@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexus Outbound Engine — Book Your Strategy Call</title>
+<title>Nexus Outbound Engine — 10–30 Confirmed Sales Calls Per Month</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -421,10 +421,10 @@ footer{
 
   <!-- HERO -->
   <div class="hero">
-    <div class="eyebrow">Nexus Outbound Engine</div>
-    <h1>Your Pipeline.<br><em>On Autopilot.</em></h1>
+    <div class="eyebrow">For B2B Companies With a Sales Team and an Inconsistent Pipeline</div>
+    <h1>We Book 10 to 30 Confirmed Sales Calls onto Your Calendar Every Month.<br><em>You Only Pay for the Calls We Deliver.</em></h1>
     <p class="hero-sub">
-      We build and run a done-for-you outbound system that finds your ideal prospects, sends personalized outreach at scale, and has our <strong>AI book the calls directly onto your calendar</strong> — you only pay <strong>per call we deliver.</strong>
+      Done-for-you outbound infrastructure. AI-personalized at scale.<br>Every positive reply gets a call back in under 10 seconds — automatically.
     </p>
     <div class="proof-pills">
       <span class="pill">10K+ emails / month</span>
@@ -448,6 +448,15 @@ footer{
     </div>
   </div>
 
+  <!-- CTA BELOW VIDEO -->
+  <div style="margin-top:20px;text-align:center;">
+    <a href="#apply" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--gold);color:var(--navy);font-family:'Figtree',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:17px;border-radius:7px;text-decoration:none;transition:background 0.18s,transform 0.15s;">
+      Apply to Get Started
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <p style="margin-top:10px;font-size:12px;color:var(--text3);letter-spacing:0.04em;">No setup fee. No long-term contract. Month-to-month.<br>Founding client pricing available — <span style="color:var(--gold);font-weight:500;">first 3 spots only.</span></p>
+  </div>
+
   <!-- NUDGE ARROW -->
   <div class="arrow-nudge">
     <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -458,7 +467,7 @@ footer{
   <!-- FORM -->
   <div class="form-section" id="apply">
     <div class="form-header">
-      <div class="form-header-title">Apply for a Strategy Call</div>
+      <div class="form-header-title">Apply to Get Started</div>
       <div class="form-header-sub">We review every application within 24 hours — no pitch, no pressure</div>
     </div>
     <!-- ============================================================
@@ -473,7 +482,7 @@ footer{
     </div>
     <!-- ============================================================ -->
     <div class="form-footer-note">
-      Founding client pricing available — <span>first 3 spots only.</span> Price increases after spots are filled.
+      Founding client pricing available — <span>first 3 spots only.</span><br>Price increases after spots are filled.
     </div>
   </div>
 
@@ -606,12 +615,13 @@ footer{
 
   <!-- BOTTOM CTA -->
   <div class="bottom-cta">
-    <div class="bottom-cta-title">Ready to Fill Your Pipeline?</div>
-    <p>Apply for a strategy call. We'll confirm fit on both sides in 20 minutes.</p>
+    <div class="bottom-cta-title">Your Competitors Are Already<br>Automating This.</div>
+    <p>If you have a sales team and need consistent pipeline, apply below. We'll confirm fit in 20 minutes.</p>
     <a href="#apply" class="bottom-cta-btn">
-      Apply Now
+      Apply to Get Started
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
+    <p style="margin-top:14px;font-size:12px;color:var(--text3);letter-spacing:0.04em;">No setup fee. No long-term contract. Month-to-month.</p>
   </div>
 
 </div>
