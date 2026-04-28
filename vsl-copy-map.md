@@ -2,214 +2,198 @@
 ## Nexus Outbound Engine
 **File:** `vsl.html`  
 **Traffic source:** Cold Meta ads → direct to this page  
-**Goal:** Watch video → submit application  
-**Rule:** No pricing anywhere on the page
+**Goal:** Watch video → click Apply to Get Started → submit application  
+**Note:** "Founding client pricing available" micro copy is intentional. No specific dollar amounts anywhere.
+
+---
+
+## THE OFFER (understand this before building anything)
+
+The Nexus Outbound Engine is a **done-for-you outbound system** with a pay-per-result model:
+
+- Nexus builds and runs dedicated cold email infrastructure for the client's business
+- 10,000+ AI-personalized emails per month (researched and written per prospect)
+- When a prospect replies with interest, the AI responds in under 10 seconds — simultaneously calling them by phone, sending a personalized email with a booking link, and sending an SMS
+- The AI handles booking the call directly onto the client's calendar
+- The client's sales team just shows up to warm, confirmed meetings
+- **No setup fee. No long-term contract. Month-to-month.**
+- Client pays per confirmed call delivered — if no calls, no charge beyond the base retainer
+- Specific outcome promise: **10 to 30 confirmed sales calls per month**
+- Founding client pricing is available for the first 3 spots (creates legitimate scarcity)
+
+**Who it's for:** B2B companies with a sales function in place and an inconsistent pipeline. They need a closer — Nexus fills the closer's calendar. Not for B2C.
 
 ---
 
 ## FUNNEL LOGIC
 
-Cold Meta traffic doesn't know Nexus. They clicked an ad about pipeline/outbound/sales calls. This page must:
+Cold Meta traffic. They don't know Nexus. They clicked an ad about pipeline or getting more sales calls. This page must:
 
-1. **Match the ad message immediately** — confirm they're in the right place
-2. **Pre-frame the video** — tell them what they're about to learn, create anticipation
-3. **Get them to watch** — the video does the heavy selling
-4. **Bridge to action after the video** — redirect their energy into the application
-5. **Handle objections below the fold** — for people who skip or pause the video
-6. **Single CTA everywhere** — the application, nothing else
+1. **Qualify immediately** — the eyebrow tells them exactly who this is for
+2. **Make a specific, outcome-focused promise** — 10–30 confirmed calls, pay per call
+3. **Get them to watch the video** — the video handles all objections and does the full sell
+4. **Give them one action after the video** — Apply to Get Started, right below the player
+5. **Handle remaining doubt below the fold** — for scanners who skip or skim
 
-No nav links. No distractions. One exit: apply.
+No nav links. One exit: apply.
 
 ---
 
 ## PAGE STRUCTURE
 
 ```
-[NAV — logo only]
-[HERO — pre-video hook]
+[NAV — logo + wordmark only, no links]
+
+[HERO]
+  Eyebrow
+  Headline (H1)
+  Subheadline
+  Proof pills
+
 [VSL VIDEO]
-[POST-VIDEO BRIDGE]
+  CTA button — directly below player
+  Micro copy — directly below button
+
+[ARROW NUDGE]
+
 [APPLICATION FORM]
-[HOW IT WORKS — condensed]
-[PROOF STRIP]
-[FAQ — objection handling]
+  Form header
+  GHL/form embed
+  Form footer note
+
+[HOW IT WORKS — condensed, for scanners]
+
+[PROOF CARDS — testimonials]
+
+[FAQ — 5 questions]
+
 [BOTTOM CTA]
-[FOOTER — minimal]
+
+[FOOTER]
 ```
 
 ---
 
 ## SECTION 1 — NAV
 
-**Structure:** Centered, sticky, blurred background — same as main page  
-**Content:** Logo image + wordmark only. No nav links, no menu, no CTA button in nav.
+Same sticky blurred nav as main page. **No links, no menu.** Logo + wordmark only.
 
 ```
-[Nexus Logo] NEXUS ACQUISITION
+[Nexus Acquisition logo]  NEXUS ACQUISITION
 ```
-
-*Rationale: Remove all escape routes. The only action on this page is applying.*
 
 ---
 
-## SECTION 2 — HERO (above the fold, before the video)
+## SECTION 2 — HERO
 
-**Purpose:** Continue the ad's message, hook them before they see the video, build enough belief to press play.
+**Purpose:** Qualify the visitor (eyebrow), make a bold specific promise (headline), explain the mechanism in one breath (subheadline). Get them to press play.
 
 ### Eyebrow
 ```
-— Watch This Short Video —
+For B2B Companies With a Sales Team and an Inconsistent Pipeline
 ```
-*(Small, gold, uppercase, centered — same eyebrow style as main page)*
+*(Gold, small caps, uppercase, centered. Same eyebrow component as main page but longer text — no flanking dashes on this one, just the text. It's an ICP qualifier, not a brand label.)*
 
 ### Headline (H1)
 ```
-We Put Confirmed Sales Calls
-On Your Calendar.
-Every Week.
+We Book 10 to 30 Confirmed Sales Calls
+onto Your Calendar Every Month.
+You Only Pay for the Calls We Deliver.
 ```
-*(Cormorant Garamond, large, "Every Week." in italic gold — same H1 treatment as main page)*
+*(Cormorant Garamond, bold, large — clamp 38px to 66px. The words "10 to 30 Confirmed Sales Calls" or the second line "You Only Pay for the Calls We Deliver." could be in italic gold to break up the weight. Suggested: "You Only Pay for the Calls We Deliver." in italic gold.)*
 
-**Alt headline option (more problem-aware):**
+### Subheadline
 ```
-Stop Chasing Leads.
-Start Showing Up to
-Warm Meetings.
+Done-for-you outbound infrastructure. AI-personalized at scale.
+Every positive reply gets a call back in under 10 seconds — automatically.
 ```
-
-### Sub-copy (below H1)
-```
-Watch the video below to see exactly how our done-for-you outbound system 
-finds your ideal clients, sends personalized outreach at scale, and has our 
-AI book the calls directly onto your calendar — without your team lifting a finger.
-```
+*(Figtree, 15–17px, muted text color `var(--text2)`, max-width 520px, centered. Same `.hero-sub` class as main page.)*
 
 ### Proof Pills (4 pills, same style as main page)
 ```
 [10K+ emails / month]  [AI books the call]  [Pay per call only]  [Month-to-month]
 ```
-
-*No CTA button in hero — the only action is to watch the video. Don't jump the gun.*
+*(These reinforce the mechanism and business model at a glance. They answer "how" and "what's the risk" without any copy.)*
 
 ---
 
 ## SECTION 3 — VSL VIDEO
 
-**Purpose:** The main asset. Everything else on the page supports this.
+**Purpose:** The primary selling mechanism. Everything above gets them to press play. Everything below handles the people who don't finish.
 
-### Above-video label (very small, muted)
+### Above-video label (very small, muted — optional)
 ```
 NEXUS OUTBOUND ENGINE — OVERVIEW
 ```
-*(10px, letter-spaced, gold, uppercase — sits just above the video frame)*
+*(10px, letter-spaced, `var(--text3)`, centered above the video frame)*
 
 ### Video frame
 - Same browser-chrome wrapper as main page (traffic light dots + top bar)
 - Top bar label: `nexusacquisitionai.com`
 - 16:9 aspect ratio
-- Gold pulsing play button
-- Grid overlay on placeholder state
+- Gold pulsing play button (glow animation)
+- Grid background overlay on placeholder state
 - Bottom bar: green live dot + text
 
-### Bottom bar text (inside video frame, below video)
+### Video bottom bar text
 ```
 [● LIVE]  Watch now — this presentation may be taken down without notice
 ```
-*(The "may be taken down" line is a soft urgency trigger — honest if you plan to rotate content)*
 
-### Below-video nudge
-Small arrow + text directly below the video container:
+### CTA Button — sits DIRECTLY below the video frame, no gap
 ```
-↓  After watching, apply below
+Apply to Get Started  →
 ```
-*(gold arrow, small muted text — acts as a scroll bridge)*
+*(Full-width gold button, same `.submit-btn` styling as main page. This is the primary CTA. It anchors to `#apply` further down the page. No bridge section between video and button — the button is immediate.)*
+
+### Micro copy — sits directly below the CTA button
+```
+No setup fee. No long-term contract. Month-to-month.
+Founding client pricing available — first 3 spots only.
+```
+*(Two lines, small, centered, `var(--text3)` for the first line. "first 3 spots only." in `var(--gold)` or `var(--text2)` to create mild visual emphasis on the scarcity element. 12px, same `.form-footer-note` styling.)*
 
 ---
 
-## SECTION 4 — POST-VIDEO BRIDGE
+## SECTION 4 — ARROW NUDGE
 
-**Purpose:** This is a critical section that goes between the video and the form. It catches people who just finished watching and channels their energy into the application. It should feel like a natural next step, not a hard sell.
-
-**Position:** Directly below the video nudge arrow, above the form.
-
-### Eyebrow
-```
-— The Next Step —
-```
-
-### Headline
-```
-If That Made Sense for Your Business,
-Here's What Happens Next.
-```
-
-### Body copy (3 short paragraphs)
-
-**Paragraph 1:**
-```
-We don't work with everyone. We take on a limited number of clients at a time 
-to make sure every system we build actually performs. If you're running a B2B 
-business with a sales function in place, there's a real chance we can help.
-```
-
-**Paragraph 2:**
-```
-The application below takes about two minutes to fill out. We review every 
-submission personally and only move forward when we're confident we can deliver 
-results for your business specifically.
-```
-
-**Paragraph 3:**
-```
-No pitch. No pressure. Just a direct conversation to confirm fit — on both sides.
-```
-
-### CTA button (anchors to #apply below)
-```
-[  Apply Now  →  ]
-```
-*(Gold button, same style as main page submit button)*
-
-### Small trust line below button
-```
-We review every application within 24 hours
-```
-*(muted, centered, 12px)*
+Same animated bouncing arrow as main page. Connects video block to the form.
 
 ---
 
 ## SECTION 5 — APPLICATION FORM
 
-**ID:** `#apply` (the anchor target for all CTA buttons)
+**ID:** `#apply` — the anchor for all CTA buttons on the page.
 
 ### Form card header
 
 **Title:**
 ```
-Apply to Work With Nexus
+Apply to Get Started
 ```
 
 **Sub:**
 ```
-Tell us a bit about your business — we'll take it from there
+We review every application within 24 hours — no pitch, no pressure
 ```
 
-*(Thin gold underline bar beneath header — same treatment as main page form header)*
+*(Same `.form-header` treatment: gold bottom-border bar, Cormorant Garamond title, muted sub.)*
 
-### Form embed placeholder
-*GHL / Typeform / Calendly embed goes here*
+### Form embed
+*GHL / Typeform / Calendly embed goes here. Replace the placeholder div.*
 
 ### Form footer note (inside the card, below the embed)
 ```
-Applications are reviewed personally. If there's a fit, you'll hear from us within 24 hours.
+Founding client pricing available — first 3 spots only.
+Price increases after spots are filled.
 ```
-*(No mention of spots, no pricing, no urgency language here — keep it clean and credible)*
+*(Same `.form-footer-note` class as main page. "first 3 spots only." in `var(--gold)`.)*
 
 ---
 
 ## SECTION 6 — HOW IT WORKS (condensed)
 
-**Purpose:** Below-the-fold support for scanners and skeptics who didn't watch the full video. Shorter than the main page version.
+**Purpose:** For scanners and skeptics who skipped the video. This section explains the mechanism so they understand what they're applying for.
 
 ### Section divider label
 ```
@@ -226,44 +210,44 @@ Cold Prospect to Booked Call.
 Five steps. Zero humans in the loop.
 ```
 
-### Steps (condensed version — shorter body text than main page)
+### Steps (condensed — shorter body text than main page version)
 
-**Step 01 — Prospect Targeting**
+**Step 01 — Prospect Targeting & List Building**
 ```
-We identify and pull your ideal prospects by ICP, verify every contact, and 
-clean the list before anything sends.
+We identify and pull targeted prospects matched to your ideal customer profile. 
+Every contact is verified before anything sends — invalid addresses removed 
+automatically so your deliverability stays clean from day one.
 ```
 
-**Step 02 — Personalized Outreach at Scale**
+**Step 02 — AI-Written Personalization at Scale**
 ```
-Our AI writes a unique opening for every email — researched from each 
-prospect's own company. 10,000+ per month, every one reads like it was 
-written just for them.
+Our system researches every prospect individually and writes a unique 
+personalized opening for each email. 10,000+ emails per month — every 
+single one reads like it was written specifically for that person.
 ```
 
 **Step 03 — Private Sending Infrastructure**
 ```
-Your emails deploy through infrastructure built only for your business. 
-Business-hours only, time-zone optimized, deliverability monitored daily.
+Emails deploy through dedicated infrastructure built exclusively for your 
+business. Business-hours only, time-zone optimized, deliverability monitored daily.
 ```
 
 **Step 04 — Instant Reply Intelligence**
 ```
 The moment a reply arrives, the system reads and categorizes it in real time. 
-Unsubscribes handled in seconds. Only genuine interest triggers the next step.
+Unsubscribes handled in seconds. Only genuine interest triggers what happens next.
 ```
 
 **Step 05 — AI Books the Call in Under 10 Seconds** *(Badge: The Core Differentiator)*
 ```
-Interest detected → AI calls the prospect, emails a booking link, and sends 
-an SMS. All at once. The meeting lands on your calendar. Your team just shows up.
+Interest detected → our AI calls the prospect, sends a booking email, and fires 
+an SMS — all simultaneously. The call lands on your calendar as a confirmed, 
+warm meeting. Your team just shows up.
 ```
 
 ---
 
-## SECTION 7 — PROOF STRIP
-
-**Purpose:** Social proof to support the claims in the video. Placeholder cards — replace with real testimonials.
+## SECTION 7 — PROOF CARDS
 
 ### Section divider label
 ```
@@ -275,31 +259,29 @@ Client Results
 What Clients Say.
 ```
 
-*(No section sub needed here — let the testimonials speak)*
+*(No section sub — let the quotes speak)*
 
-### Proof cards (2 cards, same layout as main page)
-
-**Card 1:**
+### Proof Card 1
 ```
-Quote: "Real client testimonial — specific outcome, specific timeframe."
+Quote: "Real testimonial — specific result, specific timeframe, specific business type."
 Name: [Client Name]
 Role: [Title, Company]
 ```
 
-**Card 2:**
+### Proof Card 2
 ```
-Quote: "Second testimonial — results-focused, honest, conversational."
+Quote: "Second testimonial — outcome-focused, honest, sounds like a real person."
 Name: [Client Name]
 Role: [Title, Company]
 ```
 
-*Fill with real results as they come in. Keep quotes specific: numbers, timeframes, outcomes.*
+*Replace with real testimonials as they come in. The more specific the number and timeframe, the more credible.*
 
 ---
 
 ## SECTION 8 — FAQ
 
-**Purpose:** Handle the final objections before someone decides to apply or leave. VSL page FAQ should be shorter and more conversion-focused than the main page version.
+**Purpose:** Kill the final objections. Five questions, VSL-page focused. Shorter and more direct than the main page FAQ.
 
 ### Section divider label
 ```
@@ -311,78 +293,58 @@ Common Questions
 Straight Answers.
 ```
 
-### FAQ Items (5 questions — tighter than main page's 7)
+---
 
-**Q1:**
+**Q1: How is this different from a cold email agency?**
 ```
-How is this different from a regular cold email agency?
-```
-**A1:**
-```
-Most agencies give you access to shared infrastructure and have humans 
-reviewing replies manually — which means slow follow-up, shared reputation 
-pools, and no real accountability. We build dedicated infrastructure for 
-your business specifically. The bigger difference is what happens the 
-moment a prospect shows interest: our AI is on the phone with them, in 
-their email, and in their texts simultaneously — within 10 seconds. 
-No agency has that.
+Most agencies use shared infrastructure and have humans reviewing replies 
+manually — which means slow follow-up, shared reputation pools, and no real 
+accountability for results. We build dedicated infrastructure for your business 
+specifically. The bigger difference is what happens when a prospect shows 
+interest: our AI is on the phone with them, in their inbox, and in their texts 
+within 10 seconds — simultaneously. No human involved at any step. No agency 
+does this.
 ```
 
-**Q2:**
+**Q2: What kind of businesses is this built for?**
 ```
-What kind of businesses is this actually built for?
-```
-**A2:**
-```
-B2B companies with a sales function in place. SaaS, consulting, marketing 
-services, financial services, recruiting, insurance, logistics, and 
-professional services. You need a closer — we fill their calendar. This 
-isn't configured for consumer businesses.
+B2B companies with a sales function in place and a need for consistent pipeline. 
+SaaS, consulting, marketing services, financial services, recruiting, insurance, 
+logistics, and professional services all work well. You need someone to close 
+the calls — we fill their calendar. This is not configured for consumer businesses.
 ```
 
-**Q3:**
+**Q3: How does the AI actually book the call?**
 ```
-How does the AI actually book the call?
-```
-**A3:**
-```
-The instant our system detects a positive reply, three things happen 
-simultaneously with zero human involvement: our AI calls the prospect, 
-sends a personalized email with a calendar link, and fires an SMS. 
-Most people book within minutes. The meeting lands on your team's 
-calendar as a confirmed, warm appointment.
+The instant our system detects a positive reply, three things happen with zero 
+human involvement: our AI calls the prospect directly, sends them a personalized 
+email with a booking link, and sends an SMS — all at the same time. Most people 
+book within minutes. The call lands on your sales team's calendar as a confirmed, 
+warm appointment. Your rep shows up ready to close.
 ```
 
-**Q4:**
+**Q4: How long until we're live?**
 ```
-How long until we're live and getting calls?
-```
-**A4:**
-```
-There's a brief warmup period before we contact real prospects — this is 
-non-negotiable and protects your deliverability long-term. During that 
-window we build and configure everything. Most clients are sending to 
-real prospects within 2–3 weeks of onboarding.
+There's a brief warmup period before any real prospects are contacted — 
+non-negotiable, and critical for long-term deliverability. During that window 
+we build and configure everything. Most clients are sending to real prospects 
+within 2–3 weeks of onboarding.
 ```
 
-**Q5:**
+**Q5: We already run cold email internally. Why would we need this?**
 ```
-We already run cold email internally. Why would we switch?
-```
-**A5:**
-```
-Most internal setups rely on humans catching replies and following up 
-hours later — by which point the prospect has mentally moved on. 
-The response speed here is different. The moment someone raises their 
-hand, the system is already moving. That's what converts interest into 
-booked meetings before intent decays.
+Most internal setups rely on a human catching replies and following up 
+hours later — by which point the prospect has mentally moved on. The 
+difference here is the response speed. The moment someone raises their hand, 
+the system is already moving across three channels simultaneously. That speed 
+is what converts interest into booked meetings before intent fades.
 ```
 
 ---
 
 ## SECTION 9 — BOTTOM CTA
 
-**Purpose:** Final push for people who scrolled all the way down without applying. Make it direct and confident.
+**Purpose:** Final push for scrollers who didn't apply yet. Direct and confident.
 
 ### Headline
 ```
@@ -390,36 +352,31 @@ Your Competitors Are Already
 Automating This.
 ```
 
-**Alt headline (less competitive angle):**
-```
-Ready to Stop Chasing
-and Start Closing?
-```
-
 ### Sub-copy
 ```
-If you have a sales function and need consistent pipeline, apply for a 
-strategy call. We'll confirm fit in 20 minutes.
+If you have a sales team and need consistent pipeline, apply below. 
+We'll confirm fit in 20 minutes.
 ```
 
 ### CTA Button
 ```
-[  Apply Now  →  ]
+Apply to Get Started  →
 ```
-*(links to #apply)*
+*(Same gold button, links to `#apply`)*
 
-### Below-button trust line
+### Below-button micro copy
 ```
-No pitch. We review every application personally.
+No setup fee. No long-term contract. Month-to-month.
 ```
+*(Same micro copy as below the VSL, reinforces the low-commitment nature of the offer)*
 
 ---
 
 ## SECTION 10 — FOOTER
 
-**Same as main page:**
+Same as main page:
 ```
-[Nexus Logo]  NEXUS ACQUISITION
+[Nexus Acquisition logo]  NEXUS ACQUISITION
 
 Contact  |  Privacy Policy  |  Terms
 
@@ -430,23 +387,23 @@ Contact  |  Privacy Policy  |  Terms
 
 ## COPY DECISIONS & RATIONALE
 
-### Why no CTA in the hero?
-The video is the selling mechanism. Putting a CTA button before someone has watched creates premature friction — they click, see a form, and bounce because they don't know enough yet. Let the video do the work.
+### Why "Apply to Get Started" instead of "Book a Call"?
+"Book a call" positions the next step as a sales call. "Apply to Get Started" positions it as the beginning of the engagement — they're applying to work with you, not booking a sales pitch. This creates selectivity and perceived value. It also filters for more committed leads.
 
-### Why "Apply" framing vs. "Book a Call"?
-Application framing communicates selectivity. "Book a call" sounds like a sales call. "Apply" suggests you have standards — which increases perceived value and attracts higher-quality leads. It also pre-qualifies: someone who fills out an application is more committed than someone who books a calendar slot and ghosts.
+### Why the CTA button goes directly under the video, not in a bridge section?
+Your micro copy does the bridging work. "No setup fee. No long-term contract. Month-to-month." answers the final hesitation (risk) in two seconds. A full bridge section would slow the momentum. After the video, energy is high — convert it immediately.
 
-### Why is the post-video bridge section important?
-After watching a VSL, people are in a heightened decision state. If the form appears immediately after the video with no transition, it feels jarring. The bridge section gives them a soft landing, confirms the path forward, and re-states your positioning (we're selective, limited capacity) before asking for their info.
+### Why proof pills below the headline (not after the sub)?
+The eyebrow qualifies WHO this is for. The headline makes the promise. The pills validate the HOW before the sub-copy explains it. They do a lot of work in a tiny footprint and reduce cognitive load before someone reads the full sub.
+
+### Why "Founding client pricing available — first 3 spots only"?
+This is legitimate scarcity tied to an onboarding constraint (limited capacity to build systems properly). It creates urgency without manufactured fakeness, and it rewards early movers — which is the audience you actually want. Keep this line exactly as written.
+
+### Why no dollar amounts?
+Cold traffic doesn't have enough context to evaluate a price correctly. Show them the number before they understand the value and they'll anchor wrong. Price is discussed on the strategy call after fit is confirmed on both sides.
 
 ### Why 5 FAQ questions instead of 7?
-VSL page is for cold traffic — shorter attention span than someone browsing your main site. Five focused questions covering the core objections is enough. The full 7-question FAQ belongs on the main page for people doing more due diligence.
-
-### No pricing anywhere
-Per brief. The application + strategy call is the conversion event. Pricing is a discovery conversation. Showing pricing on a VSL page for cold traffic kills conversions — too much context is missing for the number to land right.
-
-### Scarcity/urgency
-The bottom bar of the video says "this presentation may be taken down without notice" — this is a soft, honest urgency trigger. Do not add fake countdown timers or "X spots left" language unless it's actually true. Use the application exclusivity angle instead: "we only take on clients where we're confident we can deliver."
+Cold Meta traffic has a shorter patience window than someone who found you organically. Five focused questions covering the core objections is the right density. The full 7-question FAQ is appropriate on the main page for due-diligence browsers.
 
 ---
 
@@ -454,16 +411,19 @@ The bottom bar of the video says "this presentation may be taken down without no
 
 When building `vsl.html`:
 
-1. **Copy all design tokens from `mainpage`** exactly — same `:root` variables, same font imports, same CSS structure
-2. **Nav:** Same HTML as mainpage nav, but remove any nav links (none exist anyway — just confirm there are none added)
-3. **Hero:** Follow the same `.hero`, `.eyebrow`, `h1`, `.hero-sub`, `.proof-pills` structure from mainpage
-4. **VSL Section:** Copy the `.vsl-section` block from mainpage exactly — same browser chrome, same embed placeholder comment
-5. **Post-video bridge:** New section. Use `.eyebrow` + `h2`-level headline (not h1 — save h1 for the page hero) + 3 short paragraphs + `.submit-btn` style for the CTA
-6. **Form section:** Copy `.form-section` block from mainpage exactly — same header, embed placeholder, footer note
-7. **How It Works:** Same `.hiw-section` structure — use condensed body text from this doc, not the longer versions from mainpage
-8. **Proof cards:** Same `.proof-section` / `.proof-cards` structure
-9. **FAQ:** Same `.faq-section` structure and JS accordion — 5 questions instead of 7
-10. **Bottom CTA:** Same `.bottom-cta` structure
-11. **Footer:** Exact copy from mainpage footer
-12. **Page title tag:** `<title>Nexus Outbound Engine — Watch: The Automated Pipeline System</title>`
-13. **No extra nav links added** — logo + wordmark only in nav
+1. **Copy all CSS from `mainpage`** exactly — same `:root` tokens, same font imports, same base styles. No new design tokens needed.
+2. **Nav:** Same as mainpage nav. Logo image + wordmark. No links.
+3. **Hero:** Same `.hero`, `.eyebrow`, `h1`, `.hero-sub`, `.proof-pills` structure. The eyebrow here is longer text — no flanking dashes/lines (remove the `::before` / `::after` pseudo-elements on `.eyebrow` for this page, or use a modified class).
+4. **Headline treatment:** "You Only Pay for the Calls We Deliver." should be wrapped in `<em>` for italic gold styling (same as `<em>On Autopilot.</em>` on the main page).
+5. **VSL Section:** Copy `.vsl-section` block from mainpage exactly — same browser chrome, top bar, play button, bottom bar. Update bottom bar text to match this doc.
+6. **CTA button under video:** Sits outside the `.vsl-section` wrapper, immediately after it. Use the same `.submit-btn` class but make it an `<a href="#apply">` tag. Full width, gold, "Apply to Get Started →" with arrow SVG.
+7. **Micro copy under button:** Use `.form-footer-note` class or a simple centered `<p>` with `font-size:12px; color:var(--text3)`. "first 3 spots only." in a `<span>` with `color:var(--gold)`.
+8. **Arrow nudge:** Same `.arrow-nudge` section as mainpage.
+9. **Form section:** Same `.form-section` block. Update header title to "Apply to Get Started" and sub to match this doc. Update footer note to match this doc.
+10. **How It Works:** Same `.hiw-section` structure. Use the condensed step copy from this doc (shorter than mainpage).
+11. **Proof cards:** Same `.proof-section` / `.proof-cards` structure. Two cards, placeholder content.
+12. **FAQ:** Same `.faq-section` structure with JS accordion. 5 questions from this doc, not 7.
+13. **Bottom CTA:** Same `.bottom-cta` structure. Update headline, sub, and button text to match this doc. Add micro copy line below button.
+14. **Footer:** Exact copy from mainpage footer.
+15. **Page `<title>`:** `Nexus Outbound Engine — 10–30 Confirmed Sales Calls Per Month`
+16. **Page `<meta description>`:** `Done-for-you outbound system that books 10–30 confirmed B2B sales calls onto your calendar every month. You only pay for the calls we deliver.`
