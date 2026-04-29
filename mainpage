@@ -26,15 +26,18 @@
   --success:#34d399;
 }
 
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;background:#0d1a30}
 body{
+  background:#0d1a30;
   background:var(--navy);
+  color:#f5f1e8;
   color:var(--text);
   font-family:'Figtree',sans-serif;
   font-weight:300;
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
+  min-height:100vh;
 }
 
 nav{
@@ -170,6 +173,49 @@ h1 em{font-style:italic;color:var(--gold2)}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
 .vsl-bottom-text{font-size:12px;color:var(--text3);letter-spacing:0.04em}
 .vsl-bottom-text strong{color:var(--text2);font-weight:500}
+
+/* VSL CTA BLOCK */
+.vsl-cta-block{
+  text-align:center;
+  margin:28px 0 8px;
+  animation:rise 0.65s 0.14s cubic-bezier(.22,.68,0,1.2) both;
+}
+.vsl-cta-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:#c9a84c;
+  background:var(--gold);
+  color:#0d1a30;
+  color:var(--navy);
+  font-family:'Figtree',sans-serif;
+  font-size:15px;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  text-decoration:none;
+  padding:18px 44px;
+  border-radius:7px;
+  transition:background 0.18s,transform 0.15s,box-shadow 0.18s;
+  box-shadow:0 4px 24px rgba(201,168,76,0.3);
+}
+.vsl-cta-btn:hover{
+  background:#e2c472;
+  background:var(--gold2);
+  transform:translateY(-2px);
+  box-shadow:0 8px 32px rgba(201,168,76,0.45);
+}
+.vsl-cta-btn:active{transform:translateY(0)}
+.vsl-cta-btn svg{width:16px;height:16px}
+.vsl-micro-copy{
+  margin-top:14px;
+  font-size:12.5px;
+  color:rgba(245,241,232,0.5);
+  color:var(--text3);
+  letter-spacing:0.04em;
+  line-height:1.8;
+}
+.micro-urgency{
+  color:#c9a84c;
+  color:var(--gold);
+  font-weight:500;
+}
 
 /* ARROW */
 .arrow-nudge{
@@ -421,15 +467,16 @@ footer{
 
   <!-- HERO -->
   <div class="hero">
-    <div class="eyebrow">Nexus Outbound Engine</div>
-    <h1>Your Pipeline.<br><em>On Autopilot.</em></h1>
+    <div class="eyebrow">For B2B Companies With a Sales Team and an Inconsistent Pipeline</div>
+    <h1>We Book <em>10 to 30</em> Confirmed Sales Calls onto Your Calendar Every Month.</h1>
     <p class="hero-sub">
-      We build and run a done-for-you outbound system that finds your ideal prospects, sends personalized outreach at scale, and has our <strong>AI book the calls directly onto your calendar</strong> — you only pay <strong>per call we deliver.</strong>
+      Done-for-you outbound infrastructure. AI-personalized at scale.<br>
+      Every positive reply gets a call back in <strong>under 10 seconds</strong> — automatically.
     </p>
     <div class="proof-pills">
-      <span class="pill">10K+ emails / month</span>
-      <span class="pill">AI books the call</span>
-      <span class="pill">Pay per call only</span>
+      <span class="pill">10–30 calls / month</span>
+      <span class="pill">You only pay per call delivered</span>
+      <span class="pill">AI responds in &lt;10 seconds</span>
       <span class="pill">Month-to-month</span>
     </div>
   </div>
@@ -448,6 +495,18 @@ footer{
     </div>
   </div>
 
+  <!-- PRIMARY CTA + MICRO COPY -->
+  <div class="vsl-cta-block">
+    <a href="#apply" class="vsl-cta-btn">
+      Apply to Get Started
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <div class="vsl-micro-copy">
+      No setup fee.&nbsp;&nbsp;·&nbsp;&nbsp;No long-term contract.&nbsp;&nbsp;·&nbsp;&nbsp;Month-to-month.<br>
+      <span class="micro-urgency">Founding client pricing available — first 3 spots only.</span>
+    </div>
+  </div>
+
   <!-- NUDGE ARROW -->
   <div class="arrow-nudge">
     <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -458,7 +517,7 @@ footer{
   <!-- FORM -->
   <div class="form-section" id="apply">
     <div class="form-header">
-      <div class="form-header-title">Apply for a Strategy Call</div>
+      <div class="form-header-title">Apply to Get Started</div>
       <div class="form-header-sub">We review every application within 24 hours — no pitch, no pressure</div>
     </div>
     <!-- ============================================================
@@ -606,12 +665,13 @@ footer{
 
   <!-- BOTTOM CTA -->
   <div class="bottom-cta">
-    <div class="bottom-cta-title">Ready to Fill Your Pipeline?</div>
-    <p>Apply for a strategy call. We'll confirm fit on both sides in 20 minutes.</p>
+    <div class="bottom-cta-title">Ready to Fill Your Calendar?</div>
+    <p>10 to 30 confirmed sales calls per month. You only pay for the ones we deliver.</p>
     <a href="#apply" class="bottom-cta-btn">
-      Apply Now
+      Apply to Get Started
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
+    <div style="margin-top:14px;font-size:12px;color:rgba(245,241,232,0.38);letter-spacing:0.04em;">No setup fee &nbsp;·&nbsp; No long-term contract &nbsp;·&nbsp; Month-to-month</div>
   </div>
 
 </div>
